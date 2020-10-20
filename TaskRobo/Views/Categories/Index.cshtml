@@ -1,0 +1,39 @@
+﻿@model IEnumerable<TaskRobo.Models.Category>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Categories</h2>
+<p>
+    @Html.ActionLink("Create Category", "Create", "Categories", routeValues: null, htmlAttributes: new { id = "createCategoryLink" })
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryTitle)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryTitle)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Delete", "Delete", "Categories", routeValues: new { id = @item.CategoryID }, htmlAttributes: new { id = @item.CategoryID })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

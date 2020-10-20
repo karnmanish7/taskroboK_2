@@ -1,0 +1,47 @@
+﻿@model TaskRobo.Models.TaskViewModel
+@{
+    ViewBag.Title = "Create";
+
+    List<SelectListItem> categorySelectItem = Model.Catogories.Select(c => new SelectListItem() { Text = c.CategoryTitle, Value = c.CategoryID.ToString() }).ToList();
+}
+
+<h2>Create Task</h2>
+
+@using (Html.BeginForm("Create", "Tasks", FormMethod.Post, new { @class = "task", @name = "task", @id = "task" }))
+{
+    @Html.ValidationSummary(true, "create Failed, fields.");
+    <div>
+        <fieldset>
+
+            <div class="editor-label">@Html.LabelFor(u => u.TaskTitle)</div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.TaskTitle)
+                @Html.ValidationMessageFor(u => u.TaskTitle)
+                <p id="titleMsg"></p>
+            </div>
+
+            <div class="editor-label">@Html.LabelFor(u => u.TaskContent)</div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.TaskContent)
+                @Html.ValidationMessageFor(u => u.TaskContent)
+                <p id="contentMsg"></p>
+            </div>
+
+            <div class="editor-label">@Html.LabelFor(u => u.TaskStatus)</div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.TaskStatus)
+                @Html.ValidationMessageFor(u => u.TaskStatus)
+                <p id="statusMsg"></p>
+            </div>
+
+            @Html.LabelFor(model => model.CategoryID, "Category", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.CategoryID, new SelectList(categorySelectItem, "Value", "Text"), "- Please Select -")
+                @Html.ValidationMessageFor(model => model.CategoryID)
+                <p id="categoryMsg"></p>
+            </div>
+
+            <input type="submit" value="Create" />
+        </fieldset>
+    </div>
+}

@@ -1,0 +1,26 @@
+﻿@model TaskRobo.Models.Category
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create Category</h2>
+
+<hr />
+
+
+@using (Html.BeginForm())
+@*@using (Html.BeginForm("Create", "Categories", FormMethod.Post, new { @class = "category", @name = "category", @id = "category" }))*@
+{
+    @Html.ValidationSummary(true, "create Failed, fields.");
+    <div>
+        <fieldset>
+            <div class="editor-label">@Html.LabelFor(u => u.CategoryTitle)</div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.CategoryTitle)
+                @Html.ValidationMessageFor(u => u.CategoryTitle)
+                <p id="titleMsg"></p>
+            </div>
+            <input type="submit" value="Create" />
+        </fieldset>
+    </div>
+}

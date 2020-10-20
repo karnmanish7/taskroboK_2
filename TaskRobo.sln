@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskRobo", "TaskRobo\TaskRobo.csproj", "{47B4A7E6-76E0-4263-BAA7-92FDCC1572FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskRoboTest", "TaskRoboTest\TaskRoboTest.csproj", "{B5C40C21-187F-4C0E-8FC6-C8C68F8119DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47B4A7E6-76E0-4263-BAA7-92FDCC1572FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47B4A7E6-76E0-4263-BAA7-92FDCC1572FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47B4A7E6-76E0-4263-BAA7-92FDCC1572FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47B4A7E6-76E0-4263-BAA7-92FDCC1572FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5C40C21-187F-4C0E-8FC6-C8C68F8119DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5C40C21-187F-4C0E-8FC6-C8C68F8119DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5C40C21-187F-4C0E-8FC6-C8C68F8119DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5C40C21-187F-4C0E-8FC6-C8C68F8119DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB2909EA-4A60-4708-9E0F-81BFCA910981}
+	EndGlobalSection
+EndGlobal

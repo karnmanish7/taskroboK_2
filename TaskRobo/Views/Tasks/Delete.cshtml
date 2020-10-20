@@ -1,0 +1,33 @@
+﻿@model TaskRobo.Models.UserTask
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete Task</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "create Failed, fields.");
+    <div>
+        <fieldset>
+            <div class="editor-label">@Html.LabelFor(u => u.TaskTitle)</div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.TaskTitle)
+                @Html.ValidationMessageFor(u => u.TaskTitle)
+            </div>
+
+            <div class="editor-label">@Html.LabelFor(u => u.TaskContent)</div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.TaskContent)
+                @Html.ValidationMessageFor(u => u.TaskContent)
+            </div>
+
+            <div class="editor-label">@Html.LabelFor(u => u.TaskStatus)</div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.TaskStatus)
+                @Html.ValidationMessageFor(u => u.TaskStatus)
+            </div>
+            <input type="submit" value="Delete" />
+        </fieldset>
+    </div>
+}
